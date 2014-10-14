@@ -1,0 +1,21 @@
+Alex Wilson - atw9262
+HW3 - Linked List - analysis
+
+The linked list begins with a size of 0 and both pointers set to NULL. When the 
+first element is added (with either of the two add functions) both the front
+and back pointers are set to that node. When another element is added to the 
+front a new node is created, its pointers and data are set to NULL, its Element
+pointer is set to the given data, the node's 'Next' is set to the current list head,
+the current head's 'Previous' is set the new node, and the Front Pointer is set to
+the new node. The algorithm is essentially the same for adding to the back of the 
+list except the 'Next' and 'Previous' pointers are swapped.
+
+To remove elements from the list: first check the list is not empty by checking
+that either the front or back is not NULL, then set a pointer to the element to
+be removed, remove it from the list by setting the adjecent node's pointer and 
+the list's pointers, destroy the old node, and return the element.
+
+For searching the list, each list element is removed until either the element
+matches the search term or the end of the list is reached. If a match is found
+the index of the matching element is returned, if the end of the list is reached
+the function returns -1. 
